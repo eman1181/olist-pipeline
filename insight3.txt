@@ -1,0 +1,12 @@
+Top Product Categories
+=======================
+The 5 most ordered product categories (encoded values):
+product_category_name
+13    11270
+11     9727
+32     8700
+54     8415
+44     7894
+
+- The most dominant category code is: 13
+- It accounts for 11270 orders in the dataset.

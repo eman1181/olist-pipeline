@@ -1,0 +1,5 @@
+Customer Review Score Insights
+================================
+- Average review score (normalized): 0.7563
+- Standard deviation: 0.3493
+- Customer satisfaction is high.

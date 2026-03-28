@@ -1,0 +1,5 @@
+E-Commerce Price Insights
+==========================
+- Average product price (normalized): 0.0178
+- Average freight value (normalized): 0.0488
+- This suggests freight cost is high relative to product price.

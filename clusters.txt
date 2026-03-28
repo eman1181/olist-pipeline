@@ -1,0 +1,15 @@
+K-Means Clustering Results
+===========================
+Number of clusters: 3
+Features used: price, freight_value, review_score
+
+Samples per cluster:
+cluster
+0    82413
+1    27049
+2     4630
+
+Cluster Interpretation:
+- Cluster 0: 82413 orders
+- Cluster 1: 27049 orders
+- Cluster 2: 4630 orders
