@@ -6,7 +6,7 @@ import subprocess
 
 df = pd.read_csv(sys.argv[1])
 
-print("🔄 Generating plots...")
+print("Generating plots...")
 
 fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 fig.suptitle("E-Commerce Data Summary", fontsize=16, fontweight="bold")
@@ -39,7 +39,7 @@ plt.tight_layout()
 plt.savefig("summary_plot.png", dpi=150)
 plt.close()
 
-print("✅ summary_plot.png saved!")
+print("summary_plot.png saved!")
 
 
 subprocess.run(["python", "cluster.py", "data_preprocessed.csv"])

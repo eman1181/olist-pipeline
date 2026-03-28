@@ -8,14 +8,14 @@
 
 ---
 
-## 📦 Dataset
+##  Dataset
 **Brazilian E-Commerce by Olist**  
 Source: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce  
 Files used: orders, customers, order items, products, reviews
 
 ---
 
-## 🔄 Execution Flow
+## Execution Flow
 ```
 olist_merged.csv
       ↓
@@ -32,7 +32,7 @@ cluster.py       → clusters.txt
 
 ---
 
-## 🐳 Docker Commands
+##  Docker Commands
 
 ### Build the image:
 ```bash
@@ -46,7 +46,7 @@ docker build -t olist-pipeline .
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 customer-analytics/
 ├── Dockerfile
@@ -68,7 +68,7 @@ customer-analytics/
 
 ---
 
-## 📊 Sample Outputs
+##  Sample Outputs
 
 ### Insights:
 - Average product price and freight value analysis
@@ -81,3 +81,5 @@ customer-analytics/
 
 ---
 
+##  Docker Hub
+Image available at: https://hub.docker.com/r/eman1111/olist-pipeline

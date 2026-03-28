@@ -4,7 +4,7 @@ import subprocess
 
 df = pd.read_csv(sys.argv[1])
 
-print("🔄 Generating insights...")
+print("Generating insights...")
 
 # Average price and freight value 
 avg_price = df["price"].mean()
@@ -19,7 +19,7 @@ insight1 = f"""E-Commerce Price Insights
 
 with open("insight1.txt", "w") as f:
     f.write(insight1)
-print("✅ insight1.txt saved!")
+print("insight1.txt saved!")
 
 # Review score distribution
 review_mean = df["review_score"].mean()
@@ -34,7 +34,7 @@ insight2 = f"""Customer Review Score Insights
 
 with open("insight2.txt", "w") as f:
     f.write(insight2)
-print("✅ insight2.txt saved!")
+print(" insight2.txt saved!")
 
 #  Top product categories 
 top_categories = df["product_category_name"].value_counts().head(5)
@@ -50,6 +50,6 @@ The 5 most ordered product categories (encoded values):
 
 with open("insight3.txt", "w") as f:
     f.write(insight3)
-print("✅ insight3.txt saved!")
+print("insight3.txt saved!")
 
 subprocess.run(["python", "visualize.py", "data_preprocessed.csv"])

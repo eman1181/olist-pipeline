@@ -10,7 +10,7 @@ df = pd.read_csv(sys.argv[1])
 print("🔄 Starting preprocessing...")
 print(f"Original shape: {df.shape}")
 
-# ── STAGE 1: Data Cleaning ──────────────────────────────
+#1. Data Cleaning 
 # Drop duplicates
 df.drop_duplicates(inplace=True)
 
@@ -26,9 +26,9 @@ for col in df.select_dtypes(include=np.number).columns:
 for col in df.select_dtypes(include="object").columns:
     df[col].fillna("unknown", inplace=True)
 
-print(f"✅ After cleaning: {df.shape}")
+print(f"After cleaning: {df.shape}")
 
-# ── STAGE 2: Feature Transformation ────────────────────
+#2. Feature Transformation 
 # Encode categorical columns
 le = LabelEncoder()
 cat_cols = ["order_status", "customer_state", "product_category_name"]
@@ -44,7 +44,7 @@ df[num_cols] = scaler.fit_transform(df[num_cols])
 
 print("✅ Feature transformation done!")
 
-# ── STAGE 3: Dimensionality Reduction ──────────────────
+# 3. Dimensionality Reduction
 # Keep only useful columns
 keep_cols = [
     "order_status", "customer_state", "price",
@@ -55,7 +55,7 @@ df = df[keep_cols]
 
 print(f"✅ After dimensionality reduction: {df.shape}")
 
-# ── STAGE 4: Discretization ────────────────────────────
+# 4. Discretization 
 # Bin price into 3 categories
 if "price" in df.columns:
     df["price_category"] = pd.cut(
@@ -64,11 +64,11 @@ if "price" in df.columns:
         labels=["budget", "mid-range", "premium"]
     )
 
-print("✅ Discretization done!")
+print("Discretization done!")
 
 # Save result
 df.to_csv("data_preprocessed.csv", index=False)
-print("💾 Saved as data_preprocessed.csv")
+print("Saved as data_preprocessed.csv")
 
 # Call next script
 subprocess.run(["python", "analytics.py", "data_preprocessed.csv"])

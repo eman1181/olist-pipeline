@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 df = pd.read_csv(sys.argv[1])
 
-print("🔄 Running K-Means clustering...")
+print("Running K-Means clustering...")
 
 #Select numeric features for clustering 
 features = ["price", "freight_value", "review_score"]
@@ -51,5 +51,5 @@ Cluster Interpretation:
 with open("clusters.txt", "w") as f:
     f.write(output)
 
-print("✅ clusters.txt saved!")
+print("clusters.txt saved!")
 print(output)
